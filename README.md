@@ -1,4 +1,4 @@
-# ITerminal
+# I(mproved)Terminal
 A very basic and easy to use Go library to print colored outputs.
 
 ### Installation
@@ -46,7 +46,7 @@ Example of font attributes:
     // Default
     fmt.Println(iterminal.MakeFont(iterminal.Font.Default)+"Hello World!")
     
-    // via SetFont() method
+    // SetFont() method
     iterminal.SetFont(iterminal.MakeFont(iterminal.Font.Bold))
     fmt.Println("Hello World!")
 ```
