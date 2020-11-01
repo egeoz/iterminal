@@ -18,10 +18,10 @@ import (
 func main() {
     iterminal.ClearScreen()
     
-    // Usage 1:
+    // MakeColor() method
     fmt.Println(iterminal.MakeColor(iterminal.ForegroundColor.Red, iterminal.BackgroundColor.White)+"Hello World!")
     
-    // Usage 2:
+    // SetColor() method
     iterminal.SetColor(iterminal.ForegroundColor.Red, iterminal.BackgroundColor.White)
     fmt.Println("Hello World!")
 
@@ -46,7 +46,7 @@ Example of font attributes:
     // Default
     fmt.Println(iterminal.MakeFont(iterminal.Font.Default)+"Hello World!")
     
-    // via SetFont() method:
+    // via SetFont() method
     iterminal.SetFont(iterminal.MakeFont(iterminal.Font.Bold))
     fmt.Println("Hello World!")
 ```
