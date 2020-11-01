@@ -5,9 +5,9 @@ import (
 	"fmt"
 )
 
-var ForegroundColor = _ForegroundColors()
-var BackgroundColor = _BackgroundColors()
-var Font = _Fonts()
+var ForegroundColor = foregroundColors()
+var BackgroundColor = backgroundColors()
+var Font = fonts()
 
 type fColorList struct {
 	Default    string
@@ -55,7 +55,7 @@ type fList struct {
 	Blinking  string
 }
 
-func _BackgroundColors() *bColorList {
+func backgroundColors() *bColorList {
 	return &bColorList{
 		Default:     "\033[40m",
 		Black:       "\033[40m",
@@ -77,7 +77,7 @@ func _BackgroundColors() *bColorList {
 	}
 }
 
-func _ForegroundColors() *fColorList {
+func foregroundColors() *fColorList {
 	return &fColorList{
 		Default:    "\033[0m",
 		Red:        "\033[31m",
@@ -97,7 +97,7 @@ func _ForegroundColors() *fColorList {
 	}
 }
 
-func _Fonts() *fList {
+func fonts() *fList {
 	return &fList{
 		Default:   "\033[0m",
 		Bold:      "\033[1m",
