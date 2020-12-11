@@ -20,7 +20,10 @@ func main() {
     
     // MakeColor() method
     fmt.Println(iterminal.MakeColor(iterminal.ForegroundColor.Red, iterminal.BackgroundColor.White)+"Hello World!")
-    
+   
+    // Don't change the background color
+    fmt.Println(iterminal.MakeColor(iterminal.ForegroundColor.Red, "")+"Hello World!")
+
     // SetColor() method
     iterminal.SetColor(iterminal.ForegroundColor.Red, iterminal.BackgroundColor.White)
     fmt.Println("Hello World!")
