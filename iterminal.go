@@ -3,6 +3,10 @@ package iterminal
 
 import (
 	"fmt"
+	"os"
+	"os/exec"
+	"strconv"
+	"strings"
 )
 
 var ForegroundColor = foregroundColors()
@@ -134,4 +138,15 @@ func ResetFormatting() {
 func ClearScreen() {
 	fmt.Print("\033[2J")
 	MoveCursor(0, 0)
+}
+
+func GetTerminalSize() (int, int) {
+	cmd := exec.Command("stty", "size")
+	cmd.Stdin = os.Stdin
+	out, _ := cmd.Output()
+	o := strings.Fields(string(out))
+	w, _ := strconv.Atoi(o[0])
+	h, _ := strconv.Atoi(o[1])
+
+	return w, h
 }
